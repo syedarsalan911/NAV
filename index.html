@@ -1,59 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="./style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-    crossorigin="anonymous"></script>
+  <title>Feane – navbar with home, menu, about, book table</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts: Dancing Script for brand -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    /* Black & orange theme */
+    body {
+      background-color: #e9e9e9; /* neutral background for preview */
+    }
 
+    .navbar {
+      background-color: #000000 !important;
+      padding: 12px 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+    }
+
+    .navbar-brand {
+      color: #ff8c1a !important;            /* orange */
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.6rem;
+      font-weight: 700;
+      text-shadow: 0 2px 4px rgba(255,140,26,0.4);
+    }
+
+    .navbar-nav .nav-link {
+      color: #ffffff !important;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 1.2rem;
+      letter-spacing: 0.5px;
+      margin: 0 1.2rem;                     /* comfortable spacing */
+      padding: 0.5rem 0 !important;
+      border-bottom: 3px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #ff8c1a !important;
+      border-bottom-color: #ff8c1a;
+    }
+
+    /* Order Online button – orange, rounded, with depth */
+    .order-btn {
+      background-color: #ff8c1a;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 8px 30px;
+      border-radius: 40px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: none;
+      box-shadow: 0 4px 0 #b35f00;
+      transition: all 0.2s;
+      display: inline-block;
+    }
+
+    .order-btn:hover {
+      background-color: #ffaa33;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 0 #b35f00;
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 991px) {
+      .navbar-nav .nav-link {
+        margin: 0.5rem 0;
+        text-align: center;
+      }
+      .order-btn {
+        margin-top: 1rem;
+        text-align: center;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  </style>
 </head>
-
 <body>
-
   <nav class="navbar navbar-expand-lg">
     <div class="container">
+      <!-- Brand -->
       <a class="navbar-brand" href="#">Feane</a>
+
+      <!-- Toggler (mobile) -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
       </button>
+
+      <!-- Navbar links: Home, Menu, ABOUT, BOOK TABLE -->
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mx-auto">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link" href="#">HOME</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Menu</a>
+            <a class="nav-link" href="#">MENU</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#">ABOUT</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Book table</a>
+            <a class="nav-link" href="#">BOOK TABLE</a>
           </li>
         </ul>
-        <div class="user_option">
-          <a href="#" class="icon"><i class="fa-solid fa-user"></i></a>
-          <a href="#" class="icon"><i class="fa-solid fa-cart-shopping"></i></a>
-          <a href="#" class="icon"><i class="fa-solid fa-magnifying-glass"></i></a>
 
-          <a href="#" class="order_online_btn">Order Online</a>
-        </div>
-
+        <!-- Order Online button -->
+        <a href="#" class="order-btn">Order Online</a>
       </div>
     </div>
   </nav>
 
+  <!-- Bootstrap JS (for toggler) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
