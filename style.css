@@ -1,0 +1,46 @@
+body{
+    background-color: #222;
+}
+
+.navbar-brand{
+    color: white !important;
+    font-family: "Dancing script", cursive;
+    font-size: 32px;
+}
+
+.navbar{
+    padding: 15px 0;
+    background: transparent !important;
+}
+
+.nav-link{
+    margin: 0 17px;
+    text-transform: uppercase ;
+    font-weight: 500;
+    color: #ffbe33 !important;
+}
+
+.nav-link.hover{
+    color: #81684f ;
+}
+
+.user_option a{
+    color: white !important;
+}
+.user_option{
+    display: flex;
+    align-items: center;
+}
+.user_option a{
+    margin: 0 12px;
+}
+
+.order_online_btn{
+    background-color: #ffbe33;
+    color: white;
+    text-decoration: none;
+    padding: 8px 30px;
+    border-radius: 45px;
+    text-transform: capitalize;
+    border: none;
+}
